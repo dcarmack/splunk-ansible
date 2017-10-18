@@ -1,0 +1,10 @@
+---
+- name:
+  hosts: all
+  tasks:
+  - name: Stop Splunk service
+    become: true
+    command: /opt/splunk/bin/splunk stop
+  - name: Remove Splunk
+    become: true
+    shell: /bin/rm -rf /opt/splunk*

@@ -1,0 +1,8 @@
+---
+splunk_uid: "1099"
+splunk_gid: "1099"
+splunk_user: "splunk"
+splunk_group: "splunk"
+splunk_tar_package: "splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz"
+splunk_upgrade_version: "7.0.0"
+splunk_os_platform: "linux"

@@ -1,0 +1,5 @@
+---
+- hosts: targets
+  become: yes
+  roles:
+    - common

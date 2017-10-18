@@ -1,0 +1,22 @@
+---
+- name: "download Splunk"
+  get_url: 
+    url: "https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform={{ splunk_os_platform }}&version={{ splunk_upgrade_version }}&product=splunk&filename={{ splunk_tar_package }}&wget=true"
+    dest: "/opt/"
+- name: Untar Splunk package
+  unarchive: 
+    src: "/opt/{{ splunk_tar_package }}" 
+    dest: "/opt/" 
+    remote_src: "yes"
+- name: Chown SPLUNK_HOME as Splunk user
+  file: 
+    dest: "{{ splunk_home }}" 
+    owner: splunk 
+    group: splunk 
+    recurse: yes
+- name: enable Splunk boot-start
+  command: "{{ splunk_home }}/bin/splunk enable boot-start -user splunk --accept-license"
+- name: Start Splunk service
+  service: 
+    name: splunk 
+    state: started

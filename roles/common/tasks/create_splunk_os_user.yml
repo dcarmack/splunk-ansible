@@ -1,0 +1,13 @@
+---
+- name: Create splunk group
+  group: name="{{ splunk_group }}" gid="{{ splunk_gid }}" state=present
+  become: yes
+
+- name: Create splunk user
+  user: name="{{ splunk_user }}"
+        state=present
+        comment="Splunk User account"
+        uid="{{ splunk_uid }}"
+        group="{{ splunk_group }}"
+        move_home=yes
+        home="{{ splunk_home }}"

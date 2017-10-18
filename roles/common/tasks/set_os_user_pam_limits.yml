@@ -1,0 +1,42 @@
+---
+- name: Set nofile soft limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: soft
+    limit_item: nofile
+    value: 16384
+
+- name: Set nofile hard limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: hard
+    limit_item: nofile
+    value: 16384
+
+- name: Set nproc soft limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: soft
+    limit_item: nproc
+    value: 10240
+
+- name: Set nproc hard limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: hard
+    limit_item: nproc
+    value: 10240
+
+- name: Set data soft limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: soft
+    limit_item: data
+    value: 1073741824
+
+- name: Set data hard limit for splunk user
+  pam_limits:
+    domain: splunk
+    limit_type: hard
+    limit_item: data
+    value: 1073741824

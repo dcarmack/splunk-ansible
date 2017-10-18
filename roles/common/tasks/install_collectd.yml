@@ -1,0 +1,16 @@
+---
+
+- name: ensure collectd is installed
+  yum:
+    name: collectd
+    state: present
+
+- name: Start collectd service
+  service:
+    name: collectd
+    state: started
+
+- name: Enable collectd boot-statt
+  service:
+    name: collectd
+    enabled: yes
