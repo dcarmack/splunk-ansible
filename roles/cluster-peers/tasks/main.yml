@@ -1,0 +1,3 @@
+---
+- import_tasks: create_cp_base_app.yml
+- import_tasks: restart_splunk.yml

@@ -1,0 +1,9 @@
+---
+- name: Add indexes.conf to _cluster app 
+  copy:
+    src: /home/ec2-user/ansible-splunk/roles/cluster-master/files/_cluster-indexes.conf
+    dest: "{{ splunk_home }}/etc/master-apps/_cluster/local/indexes.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+

@@ -1,0 +1,10 @@
+---
+- hosts: indexers
+  become: yes
+  roles:
+    - common
+
+- hosts: cm
+  become: yes
+  roles:
+    - common

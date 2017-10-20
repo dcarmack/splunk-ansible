@@ -1,8 +1,5 @@
 ---
 
 
-- import_tasks: create_splunk_os_user.yml
-- import_tasks: set_os_user_pam_limits.yml
 - import_tasks: install_collectd.yml
-- import_tasks: install_splunk.yml
 

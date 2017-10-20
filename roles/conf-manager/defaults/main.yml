@@ -1,0 +1,5 @@
+---
+app_license_all: "license_all"
+app_collectd_input: "collectd_inputs"
+lm: 172.31.2.62
+app_idxs_all: "indexes_all"

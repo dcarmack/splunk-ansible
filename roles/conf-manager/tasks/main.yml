@@ -1,0 +1,4 @@
+---
+- import_tasks: create_license_app.yml
+- import_tasks: create_collectd_hec_app.yml
+- import_tasks: create_indexes_all_app.yml

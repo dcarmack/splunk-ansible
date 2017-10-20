@@ -1,0 +1,31 @@
+---
+- file:
+    path: "{{ splunk_home }}/etc/apps/{{ app_cluster_passkey }}/local/"
+    state: directory
+    mode: 0700
+
+- file:
+    path: "{{ splunk_home }}/etc/apps/{{ app_cluster_passkey }}/metadata/"
+    state: directory
+    mode: 0700
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/cluster-all/files/pk-server.conf
+    dest: "{{ splunk_home }}/etc/apps/{{ app_cluster_passkey }}/local/server.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    dest: "{{ splunk_home }}/etc/apps/{{ app_cluster_passkey }}/local/app.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    dest: "{{ splunk_home }}/etc/apps/{{ app_cluster_passkey }}/metadata/local.data"
+    owner: splunk
+    group: splunk
+    mode: 0600

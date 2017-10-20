@@ -1,5 +1,15 @@
 ---
-- hosts: targets
-  become: yes
+- hosts: cm
+  become: true
+  become_user: splunk
   roles:
-    - common
+    - cluster-all
+    - license-slave
+    - cluster-master
+
+- hosts: indexers
+  become: true
+  become_user: splunk
+  roles:
+    - cluster-all
+    - cluster-peers

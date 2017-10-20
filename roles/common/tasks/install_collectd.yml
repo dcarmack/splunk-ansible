@@ -5,6 +5,16 @@
     name: collectd
     state: present
 
+- yum:
+    name: collectd-write_http.x86_64
+    state: present
+
+- name: configure collectd
+  copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/collectd.conf
+    dest: "/etc/collectd.d/splunk.conf"
+    mode: 0600
+
 - name: Start collectd service
   service:
     name: collectd

@@ -1,0 +1,32 @@
+---
+- name: Create indexes_all app in "{{ app_loc }}"
+  file:
+    path: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_idxs_all }}/local/"
+    state: directory
+    mode: 0700
+
+- file:
+    path: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_idxs_all }}/metadata/"
+    state: directory
+    mode: 0700
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/conf-manager/files/idx-all-indexes.conf
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_idxs_all }}/local/indexes.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_idxs_all }}/local/app.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_idxs_all }}/metadata/local.data"
+    owner: splunk
+    group: splunk
+    mode: 0600

@@ -1,0 +1,33 @@
+---
+- name: Create app for collectd hec input in "{{ app_loc }}"
+  file:
+    path: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_collectd_input }}/local/"
+    state: directory
+    mode: 0700
+
+- file:
+    path: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_collectd_input }}/metadata/"
+    state: directory
+    mode: 0700
+
+- template:
+    src: /home/ec2-user/ansible-splunk/roles/conf-manager/files/collectd-hec-inputs.conf
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_collectd_input }}/local/inputs.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_collectd_input }}/local/app.conf"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
+- copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/{{ app_collectd_input }}/metadata/local.data"
+    owner: splunk
+    group: splunk
+    mode: 0600
+
