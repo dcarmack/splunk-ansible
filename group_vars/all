@@ -1,5 +1,5 @@
 ---
 splunk_home: "/opt/splunk"
 pass4SymmKey: mysplunkcluster
-playbook_home: "/home/ec2-user/ansible-splunk"
+playbook_home: "/Users/dcarmack/Documents/git/splunk-ansible"
 app_collectd_input: "collectd_inputs"

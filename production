@@ -1,3 +1,4 @@
+
 [indexers]
 172.31.3.54
 172.31.8.96
@@ -6,4 +7,5 @@
 172.31.5.136
 
 [cm]
-172.31.2.62
+34.209.138.112 ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
+
