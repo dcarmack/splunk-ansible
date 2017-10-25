@@ -10,35 +10,35 @@
     mode: 0700
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/cluster-master/files/idx-base-inputs.conf
+    src: "{{ playbook_home }}/roles/cluster-master/files/idx-base-inputs.conf"
     dest: "{{ splunk_home }}/etc/master-apps/{{ app_idx_base }}/local/inputs.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/cluster-master/files/idx-base-indexes.conf
+    src: "{{ playbook_home }}/roles/cluster-master/files/idx-base-indexes.conf"
     dest: "{{ splunk_home }}/etc/master-apps/{{ app_idx_base }}/local/indexes.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/cluster-master/files/idx-base-web.conf
+    src: "{{ playbook_home }}/roles/cluster-master/files/idx-base-web.conf"
     dest: "{{ splunk_home }}/etc/master-apps/{{ app_idx_base }}/local/web.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    src: "{{ playbook_home }}/roles/common/files/base-app.conf"
     dest: "{{ splunk_home }}/etc/master-apps/{{ app_idx_base }}/local/app.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    src: "{{ playbook_home }}/roles/common/files/base-local.meta"
     dest: "{{ splunk_home }}/etc/master-apps/{{ app_idx_base }}/metadata/local.data"
     owner: splunk
     group: splunk
