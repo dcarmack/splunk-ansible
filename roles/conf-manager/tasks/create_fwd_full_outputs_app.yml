@@ -11,21 +11,21 @@
     mode: 0700
 
 - template:
-    src: /home/ec2-user/ansible-splunk/roles/conf-manager/templates/outputs.conf.j2
+    src: "{{ playbook_home }}/roles/conf-manager/templates/outputs.conf.j2"
     dest: "{{ splunk_home }}/etc/{{ app_loc_outputs }}/{{ app_fwd_full_outputs }}/local/outputs.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    src: "{{ playbook_home }}/roles/common/files/base-app.conf"
     dest: "{{ splunk_home }}/etc/{{ app_loc_outputs }}/{{ app_fwd_full_outputs }}/local/app.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    src: "{{ playbook_home }}/roles/common/files/base-local.meta"
     dest: "{{ splunk_home }}/etc/{{ app_loc_outputs }}/{{ app_fwd_full_outputs }}/metadata/local.data"
     owner: splunk
     group: splunk
