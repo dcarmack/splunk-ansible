@@ -11,7 +11,7 @@
 
 - name: configure collectd
   copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/collectd.conf
+    src: "{{ playbook_home }}/roles/common/files/collectd.conf"
     dest: "/etc/collectd.d/splunk.conf"
     mode: 0600
 
