@@ -1,9 +1,0 @@
----
-- hosts: cm
-  become: true
-  become_user: splunk
-  roles:
-    - cluster-all
-    - conf-manager
-    - cluster-master
-
