@@ -1,0 +1,17 @@
+[indexAndForward]
+index = false
+
+[indexer_discovery:cluster_master_1]
+master_uri = https://{{ lm }}:8089
+pass4SymmKey = {{ pass4SymmKey }}
+
+[tcpout:cluster_1]
+indexerDiscovery = cluster_master_1 
+autoLBFrequency = 30
+forceTimebasedAutoLB = true
+
+[tcpout]
+defaultGroup = cluster_1
+forwardedindex.filter.disable = true  
+indexAndForward = false 
+

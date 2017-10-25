@@ -15,10 +15,21 @@
     dest: "/etc/collectd.d/splunk.conf"
     mode: 0600
 
+- command: cat /etc/collectd.conf
+  register: collectd
+
+- name: Uncomment line from collectd.conf
+  lineinfile:
+    path: /etc/collectd.conf
+    regexp: '^#Interval\s*10'
+    line: 'Interval     1 '
+    state: present
+  when: collectd.stdout.find('Interval     1 ') == -1
+
 - name: Start collectd service
   service:
     name: collectd
-    state: started
+    state: restarted
 
 - name: Enable collectd boot-statt
   service:

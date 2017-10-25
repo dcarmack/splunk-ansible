@@ -1,5 +1,8 @@
 ---
 app_license_all: "license_all"
-app_collectd_input: "collectd_inputs"
+app_fwd_full_outputs : "fwd_full_outputs"
 lm: 172.31.2.62
 app_idxs_all: "indexes_all"
+app_loc: '{{ "master-apps" if ansible_hostname == "ip-172-31-2-62" else "deployment-apps" }}'
+app_loc_outputs: '{{ "apps" if ansible_hostname == "ip-172-31-2-62" else "deployment-apps" }}'
+

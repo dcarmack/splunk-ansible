@@ -31,12 +31,30 @@
   pam_limits:
     domain: splunk
     limit_type: soft
-    limit_item: data
-    value: 1073741824
+    limit_item: fsize
+    value: unlimited
 
 - name: Set data hard limit for splunk user
   pam_limits:
     domain: splunk
     limit_type: hard
-    limit_item: data
-    value: 1073741824
+    limit_item: fsize
+    value: unlimited
+
+- name: checking systemd directory status
+  stat:
+    path: /etc/systemd/system/
+  register: sys
+
+- name: systemd dir exists, creating filelimit.conf
+  file:
+    path: /etc/systemd/system/splunk.service.d/
+    state: directory
+    mode: 0700
+  when: sys.stat.isdir is defined
+
+- copy:
+    src:  "{{ playbook_home }}/roles/common/files/filelimit.conf"
+    dest: /etc/systemd/system/splunk.service.d/
+    mode: 0600
+  when: sys.stat.isdir is defined

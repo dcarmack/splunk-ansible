@@ -9,22 +9,22 @@
     state: directory
     mode: 0700
 
-- copy:
-    src: /home/ec2-user/ansible-splunk/roles/cluster-master/files/cm-server.conf
+- template:
+    src: "{{ playbook_home }}//roles/cluster-master/templates/cm-server.conf.j2"
     dest: "{{ splunk_home }}/etc/apps/cluster_master_base/local/server.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-app.conf
+    src: "{{ playbook_home }}/roles/common/files/base-app.conf"
     dest: "{{ splunk_home }}/etc/apps/cluster_master_base/local/app.conf"
     owner: splunk
     group: splunk
     mode: 0600
 
 - copy:
-    src: /home/ec2-user/ansible-splunk/roles/common/files/base-local.meta
+    src: "{{ playbook_home }}/roles/common/files/base-local.meta"
     dest: "{{ splunk_home }}/etc/apps/cluster_master_base/metadata/local.data"
     owner: splunk
     group: splunk

@@ -1,0 +1,14 @@
+---
+
+- name: add thp disable script to init.d
+  copy:
+    src: /home/ec2-user/ansible-splunk/roles/common/files/thp-disable
+    dest: /etc/rc.d/init.d/thp-disable
+    mode: 0700
+
+- name: enable thp disable script to run at level 3
+  file:
+    src: '/etc/rc.d/init.d/thp-disable'
+    dest: '/etc/rc.d/rc3.d/S70thp-disable'
+    state: link
+
