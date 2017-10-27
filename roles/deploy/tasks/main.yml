@@ -1,0 +1,8 @@
+---
+- import_tasks: add_cluster_indexes.yml
+- import_tasks: create_cm_base_app.yml
+- import_tasks: create_indexer_base_app.yml
+- import_tasks: link_collectd_hec_app.yml
+- import_tasks: restart_splunk.yml
+- import_tasks: reload_cluster_master.yml
+

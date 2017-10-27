@@ -1,4 +1,4 @@
-import boto3
+import yaml
 
   
 ec2client = boto3.client('ec2')
