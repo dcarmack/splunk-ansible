@@ -1,10 +1,9 @@
----
-- hosts: indexers
+- hosts: cm
   become: yes
   roles:
     - common
 
-- hosts: cm
+- hosts: indexers
   become: yes
   roles:
     - common

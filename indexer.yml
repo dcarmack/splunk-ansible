@@ -1,0 +1,7 @@
+---
+- hosts: indexers
+  become: true
+  become_user: splunk
+  roles:
+    - cluster-all
+    - cluster-peers

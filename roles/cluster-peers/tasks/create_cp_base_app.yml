@@ -9,8 +9,8 @@
     state: directory
     mode: 0700
 
-- copy:
-    src: "{{ playbook_home }}/roles/cluster-peers/files/cp-server.conf"
+- template:
+    src: "{{ playbook_home }}/roles/cluster-peers/templates/cp-server.conf.j2"
     dest: "{{ splunk_home }}/etc/apps/cluster_indexer_base/local/server.conf"
     owner: splunk
     group: splunk

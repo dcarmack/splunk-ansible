@@ -1,7 +1,7 @@
 ---
 - name: "download Splunk"
   get_url: 
-    url: "https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform={{ splunk_os_platform }}&version={{ splunk_upgrade_version }}&product=splunk&filename={{ splunk_tar_package }}&wget=true"
+    url: "https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=7.0.0&product=splunk&filename=splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz&wget=true"
     dest: "/opt/"
 - name: Untar Splunk package
   unarchive: 

@@ -1,0 +1,3 @@
+---
+- import_tasks: create_aws_security_groups.yml
+- import_tasks: create_aws_instance.yml

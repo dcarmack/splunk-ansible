@@ -1,0 +1,8 @@
+
+
+SplunkWeb:
+  description: 'Allows access to Splunk web port.'
+    protocol: 'tcp'
+    port_range_from: 8000
+    port_range_to: 8000
+    iprange: '0.0.0.0/0'

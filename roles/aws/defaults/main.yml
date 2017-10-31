@@ -1,0 +1,35 @@
+---
+app_idx_base: "cluster_indexer_base"
+
+# EC2
+ec2_ip_space: 
+  internal: "172.16.0.0/12"
+  all: "0.0.0.0/0"
+
+ec2_key_name: "dcarmack"
+ec2_region: "us-west-2"
+
+ec2_volume_size_gb: 25
+ec2_volume_device_name: "/dev/sda1"
+
+ec2_tags: 
+  cm: "cluster-master"
+  indexer: "indexers"
+
+ec2sg:
+  spl_mgmt_port: "splunk-mgmt"
+  spl_web_port: "splunk-web"
+  spl_idx_cluster_member: "splunk-idx-cluster"
+  ssh: "ssh"
+
+ec2_instance:
+  tmicro: t2.micro
+  tsmall: t2.small
+  tmedium: t2.medium
+
+ec2_image:
+  rhel7: ami-9fa343e7
+  amazon_linux: ami-e689729e
+
+
+

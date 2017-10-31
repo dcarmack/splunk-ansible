@@ -1,10 +1,10 @@
 
 
-deploy:
+indexer:
   InstanceType: "t2.micro"
   ImageId: "ami-e689729e"
   MinCount: 1
-  MaxCount: 1
+  MaxCount: 2
   KeyName: dcarmack
   SecurityGroups: ['indexers','launch-wizard-15']
 

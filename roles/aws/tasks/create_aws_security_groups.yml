@@ -1,0 +1,48 @@
+---
+- name: Creating AWS security group for Splunk mgmt port. 
+  ec2_group:
+    name: "{{ ec2sg.spl_mgmt_port }}"
+    description: "Opens ports for required splunk mgmt port"
+    region: "{{ ec2_region }}"
+    rules:
+      - proto: tcp
+        from_port: "{{ ports.splunk_mgmt }}"
+        to_port: "{{ ports.splunk_mgmt }}"
+        cidr_ip: "{{ ec2_ip_space.internal }}"
+
+- name: Creating AWS security group for Splunk web port. 
+  ec2_group:
+    name: "{{ ec2sg.spl_web_port }}"
+    description: "Opens ports for required splunk web port"
+    region: "{{ ec2_region }}"
+    rules:
+      - proto: tcp
+        from_port: "{{ ports.splunk_web }}"
+        to_port: "{{ ports.splunk_web }}"
+        cidr_ip: "{{ ec2_ip_space.all }}"
+
+- name: Creating AWS security group for indexer cluster member. 
+  ec2_group:
+    name: "{{ ec2sg.spl_idx_cluster_member }}"
+    description: "Opens port required for indexers"
+    region: "{{ ec2_region }}"
+    rules:
+      - proto: tcp
+        from_port: "{{ ports.splunk_tcpin }}"
+        to_port: "{{ ports.splunk_tcpin }}"
+        cidr_ip: "{{ ec2_ip_space.internal }}"
+      - proto: tcp
+        from_port: "{{ ports.splunk_idx_rep }}"
+        to_port: "{{ ports.splunk_idx_rep }}"
+        cidr_ip: "{{ ec2_ip_space.internal }}"
+
+- name: Creating AWS security group for ssh. 
+  ec2_group:
+    name: "{{ ec2sg.ssh }}"
+    description: "Opens port required for ssh"
+    region: "{{ ec2_region }}"
+    rules:
+      - proto: tcp
+        from_port: "{{ ports.ssh }}"
+        to_port: "{{ ports.ssh }}"
+        cidr_ip: "{{ ec2_ip_space.all }}"

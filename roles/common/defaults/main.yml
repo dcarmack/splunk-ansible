@@ -6,3 +6,5 @@ splunk_group: "splunk"
 splunk_tar_package: "splunk-7.0.0-c8a78efdd40f-Linux-x86_64.tgz"
 splunk_upgrade_version: "7.0.0"
 splunk_os_platform: "linux"
+splunk_passwd: "aAaA1919"
+

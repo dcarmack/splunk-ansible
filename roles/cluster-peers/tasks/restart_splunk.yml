@@ -1,3 +1,7 @@
 ---
-- name: Restarted Splunk service
-  shell: "{{ splunk_home }}/bin/splunk restart"
+- name: Start Splunk service
+  service: 
+    name: splunk 
+    state: restarted
+  become: true
+  become_user: root

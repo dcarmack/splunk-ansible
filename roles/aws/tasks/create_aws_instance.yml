@@ -1,0 +1,28 @@
+---
+- name: Create an EC2 instance for cluster master
+  ec2:
+    key_name: "{{ ec2_key_name }}"
+    state: present
+    region: "{{ ec2_region }}"
+    instance_type: "{{ ec2_instance.tmicro }}"
+    image: "{{ ec2_image.amazon_linux }}"
+    ebs_optimized: false
+    group: ['{{ ec2sg.ssh }}','{{ ec2sg.spl_web_port }}','{{ ec2sg.spl_mgmt_port }}']
+    wait: yes
+    count: 1
+    instance_tags: { 'Name' : '{{ ec2_tags.cm }}' }
+    volumes: [{"device_name":"/dev/xvda","volume_type":"gp2","volume_size":"25"}]
+
+- name: Create EC2 instances for indexer cluster members
+  ec2:
+    key_name: "{{ ec2_key_name }}"
+    state: present
+    region: "{{ ec2_region }}"
+    instance_type: "{{ ec2_instance.tmedium }}"
+    image: "{{ ec2_image.amazon_linux }}"
+    ebs_optimized: false
+    group: ['{{ ec2sg.ssh }}','{{ ec2sg.spl_idx_cluster_member }}','{{ ec2sg.spl_mgmt_port }}']
+    wait: yes
+    count: 3
+    instance_tags: { 'Name' : '{{ ec2_tags.indexer }}' }
+    volumes: [{"device_name":"/dev/xvda","volume_type":"gp2","volume_size":"100"}]

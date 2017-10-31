@@ -2,7 +2,7 @@
 - name: Changing Splunk default admin password 
   become: yes
   become_user: splunk
-  shell: "{{ splunk_home }}/bin/splunk edit user admin -password aAaA1919 -auth admin:changeme"
+  shell: "{{ splunk_home }}/bin/splunk edit user admin -password {{ splunk_passwd }} -auth admin:changeme"
 - name: Setting default password changed flag
   file:
     path: "{{ splunk_home }}/etc/.ui_login"
