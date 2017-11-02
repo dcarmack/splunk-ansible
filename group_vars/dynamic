@@ -1,4 +1,4 @@
 ---
-cm_private_dns: ip-172-31-26-129.us-west-2.compute.internal
-app_loc: '{{ "master-apps" if ansible_hostname == "ip-172-31-26-129" else "deployment-apps" }}'
-app_loc_outputs: '{{ "apps" if ansible_hostname == "ip-172-31-26-129" else "deployment-apps" }}'
+cm_private_dns: ip-172-31-29-142.us-west-2.compute.internal
+app_loc: '{{ "master-apps" if ansible_hostname == "ip-172-31-29-142" else "deployment-apps" }}'
+app_loc_outputs: '{{ "apps" if ansible_hostname == "ip-172-31-29-142" else "deployment-apps" }}'

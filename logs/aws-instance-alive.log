@@ -1,0 +1,9 @@
+Thu Nov  2 11:01:44 PDT 2017 starting: verify ssh status on AWS instances.
+ssh is refused on ec2-34-209-40-155.us-west-2.compute.amazonaws.com
+ssh is refused on ec2-34-209-40-155.us-west-2.compute.amazonaws.com
+ssh is refused on ec2-34-209-40-155.us-west-2.compute.amazonaws.com
+ssh is successful on ec2-34-209-40-155.us-west-2.compute.amazonaws.com
+ssh is successful on ec2-34-209-219-9.us-west-2.compute.amazonaws.com
+ssh is successful on ec2-34-223-249-74.us-west-2.compute.amazonaws.com
+ssh is successful on ec2-54-202-64-64.us-west-2.compute.amazonaws.com
+Thu Nov  2 11:02:04 PDT 2017 completed: verify ssh status on AWS instances.
