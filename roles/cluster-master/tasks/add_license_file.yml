@@ -1,0 +1,14 @@
+---
+- name: Create enterprise license directory
+  file:
+    path: "{{ splunk_home }}/etc/licenses/enterprise"
+    state: directory
+    mode: 0700
+- name: Install Splunk license
+  copy:
+    src: "{{ license_file_path }}{{ license_file_name }}"
+    dest: "{{ splunk_home }}/etc/licenses/enterprise/{{ license_file_name }}"
+    owner: splunk
+    group: splunk
+    mode: 0600
+

@@ -1,4 +1,7 @@
 ---
 app_idx_base: "cluster_indexer_base"
 
+license_file_path: /Users/dcarmack/Documents/Splunk_License/
+
+license_file_name: Splunk_Enterprise_NFR_Q3FY18.lic
 

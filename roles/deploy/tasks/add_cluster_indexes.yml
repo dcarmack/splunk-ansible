@@ -1,9 +1,0 @@
----
-- name: Add indexes.conf to _cluster app 
-  copy:
-    src: "{{ playbook_home }}/roles/cluster-master/files/_cluster-indexes.conf"
-    dest: "{{ splunk_home }}/etc/master-apps/_cluster/local/indexes.conf"
-    owner: splunk
-    group: splunk
-    mode: 0600
-

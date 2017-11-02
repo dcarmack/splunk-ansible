@@ -1,3 +1,0 @@
----
-- name: Restarted Splunk service
-  shell: "{{ splunk_home }}/bin/splunk restart"

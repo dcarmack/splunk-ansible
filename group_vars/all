@@ -4,8 +4,6 @@ pass4SymmKey: mysplunkcluster
 playbook_home: "/Users/dcarmack/Documents/git/splunk-ansible"
 app_collectd_input: "collectd_inputs"
 
-cm_dns: ip-172-31-19-71.us-west-2.compute.internal
-
 ports:
   splunk_mgmt: "8089"
   splunk_web: "8000"

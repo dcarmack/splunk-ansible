@@ -1,3 +1,0 @@
----
-- name: Restarted reload cluster master
-  shell: "{{ splunk_home }}/bin/splunk apply cluster-bundle -auth admin:aAaA1919"

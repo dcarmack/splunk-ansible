@@ -1,7 +1,9 @@
 ---
-- hosts: cm
+- hosts: cluster-master
   become: true
   become_user: splunk
+  vars_files:
+    - group_vars/dynamic
   roles:
     - cluster-all
     - conf-manager

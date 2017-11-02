@@ -10,7 +10,7 @@
     group: ['{{ ec2sg.ssh }}','{{ ec2sg.spl_web_port }}','{{ ec2sg.spl_mgmt_port }}']
     wait: yes
     count: 1
-    instance_tags: { 'Name' : '{{ ec2_tags.cm }}' }
+    instance_tags: { 'Name' : '{{ ec2_tags.cm }}', 'generated_by': 'ansible' }
     volumes: [{"device_name":"/dev/xvda","volume_type":"gp2","volume_size":"25"}]
 
 - name: Create EC2 instances for indexer cluster members
@@ -24,5 +24,8 @@
     group: ['{{ ec2sg.ssh }}','{{ ec2sg.spl_idx_cluster_member }}','{{ ec2sg.spl_mgmt_port }}']
     wait: yes
     count: 3
-    instance_tags: { 'Name' : '{{ ec2_tags.indexer }}' }
+    instance_tags: { 'Name' : '{{ ec2_tags.indexer }}', 'generated_by': 'ansible' }
     volumes: [{"device_name":"/dev/xvda","volume_type":"gp2","volume_size":"100"}]
+
+
+ 

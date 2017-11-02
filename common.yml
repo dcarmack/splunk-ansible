@@ -1,4 +1,4 @@
-- hosts: cm
+- hosts: cluster-master
   become: yes
   roles:
     - common
