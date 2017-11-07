@@ -1,71 +1,71 @@
-Thu Nov  2 11:09:06 PDT 2017 starting: ansible-playbook indexer.yml
+Mon Nov  6 08:58:49 PST 2017 starting: ansible-playbook indexer.yml
 
 PLAY [indexers] **********************************************************************************************************************************************************************************************************************************************************************
 
 TASK [Gathering Facts] ***************************************************************************************************************************************************************************************************************************************************************
-ok: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-ok: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-ok: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
+ok: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+ok: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+ok: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-all : file] ************************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-all : file] ************************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+
+TASK [cluster-all : template] ********************************************************************************************************************************************************************************************************************************************************
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-all : copy] ************************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-all : copy] ************************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-
-TASK [cluster-all : copy] ************************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : file] **********************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : file] **********************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : template] ******************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : copy] **********************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : copy] **********************************************************************************************************************************************************************************************************************************************************
-changed: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]
-changed: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]
+changed: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]
+changed: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]
 
 TASK [cluster-peers : Start Splunk service] ******************************************************************************************************************************************************************************************************************************************
-fatal: [ec2-34-209-40-155.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> Be an IT superhero. Go home early.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available............................................................................................................................................................................................................................................................................................................\n\nWARNING: web interface does not seem to be available!\n\n"}
-fatal: [ec2-34-223-249-74.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> Be an IT superhero. Go home early.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available............................................................................................................................................................................................................................................................................................................\n\nWARNING: web interface does not seem to be available!\n\n"}
-fatal: [ec2-34-209-219-9.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> Be an IT superhero. Go home early.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available............................................................................................................................................................................................................................................................................................................\n\nWARNING: web interface does not seem to be available!\n\n"}
+fatal: [ec2-54-149-194-177.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> All batbelt. No tights.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available\n\nWARNING: web interface does not seem to be available!\n\n"}
+fatal: [ec2-54-202-60-77.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> All batbelt. No tights.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available\n\nWARNING: web interface does not seem to be available!\n\n"}
+fatal: [ec2-34-209-28-90.us-west-2.compute.amazonaws.com]: FAILED! => {"changed": false, "failed": true, "msg": "Stopping Splunk...\nStopping splunkd...\nShutting down.  Please wait, as this may take a few minutes.\n.. [  OK  ]\r\nStopping splunk helpers...\n [  OK  ]\r\nDone.\nStarting Splunk...\n\nSplunk> All batbelt. No tights.\n\nChecking prerequisites...\n\tChecking http port [8000]: open\n\tChecking mgmt port [8089]: open\n\tChecking appserver port [127.0.0.1:8065]: open\n\tChecking kvstore port [8191]: open\n\tChecking configuration...  Done.\n\tChecking critical directories...\tDone\n\tChecking indexes...\n\t\tValidated: _audit _internal _introspection _telemetry _thefishbucket history main summary\n\tDone\n\tChecking filesystem compatibility...  Done\n\tChecking conf files for problems...\n\tDone\n\tChecking default conf files for edits...\n\tValidating installed files against hashes from '/opt/splunk/splunk-7.0.0-c8a78efdd40f-linux-2.6-x86_64-manifest'\n\tAll installed files intact.\n\tDone\n\tChecking replication_port port [9887]:  [  OK  ]\r\nopen\nAll preliminary checks passed.\n\nStarting splunk server daemon (splunkd)...  \nDone\n\nWaiting for web server at http://127.0.0.1:8000 to be available............................................................................................................................................................................................................................................................................................................\n\nWARNING: web interface does not seem to be available!\n\n"}
 	to retry, use: --limit @/Users/dcarmack/Documents/git/splunk-ansible/indexer.retry
 
 PLAY RECAP ***************************************************************************************************************************************************************************************************************************************************************************
-ec2-34-209-219-9.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
-ec2-34-209-40-155.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
-ec2-34-223-249-74.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
+ec2-34-209-28-90.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
+ec2-54-149-194-177.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
+ec2-54-202-60-77.us-west-2.compute.amazonaws.com : ok=11   changed=10   unreachable=0    failed=1   
 
-Thu Nov  2 11:14:55 PDT 2017 completed: ansible-playbook aws.yml
+Mon Nov  6 09:04:39 PST 2017 completed: ansible-playbook indexer.yml

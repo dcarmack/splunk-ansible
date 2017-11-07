@@ -1,0 +1,12 @@
+---
+- name: ensure git is installed
+  yum:
+    name: git
+    state: present
+  become: true
+  become_user: root
+
+- name: git download - adding eventgen app to master-apps dir
+  git:
+    repo: https://github.com/splunk/eventgen.git
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/eventgen"

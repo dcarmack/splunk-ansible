@@ -3,3 +3,5 @@
 - import_tasks: create_collectd_hec_app.yml
 - import_tasks: create_indexes_all_app.yml
 - import_tasks: create_fwd_full_outputs_app.yml
+- import_tasks: git_eventgen.yml
+- import_tasks: create_splunk_squid_ta.yml

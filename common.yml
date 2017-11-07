@@ -1,9 +1,13 @@
 - hosts: cluster-master
   become: yes
+  vars_files:
+    - group_vars/vault
   roles:
     - common
 
 - hosts: indexers
   become: yes
+  vars_files:
+    - group_vars/vault
   roles:
     - common

@@ -4,6 +4,7 @@
   become_user: splunk
   vars_files:
     - group_vars/dynamic
+    - group_vars/vault
   roles:
     - cluster-all
     - cluster-peers

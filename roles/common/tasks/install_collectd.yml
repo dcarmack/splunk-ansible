@@ -8,7 +8,6 @@
 - yum:
     name: collectd-write_http.x86_64
     state: present
-    ignore_errors: yes
 
 - name: configure collectd
   copy:

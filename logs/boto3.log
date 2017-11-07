@@ -1,13 +1,13 @@
-Thu Nov  2 11:01:43 PDT 2017 starting: Get AWS instance details.
+Mon Nov  6 08:52:20 PST 2017 starting: Get AWS instance details.
 [localhost]
 localhost ansible_connection=local ansible_python_interpreter=python
 
 [indexers]
-ec2-34-209-40-155.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
-ec2-34-209-219-9.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
-ec2-34-223-249-74.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
+ec2-54-202-60-77.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
+ec2-34-209-28-90.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
+ec2-54-149-194-177.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
 
 [cluster-master]
-ec2-54-202-64-64.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
+ec2-34-209-136-55.us-west-2.compute.amazonaws.com ansible_user=ec2-user ansible_ssh_private_key_file=~/.ssh/dcarmack.pem
 
-Thu Nov  2 11:01:44 PDT 2017 completed: Get AWS instance details.
+Mon Nov  6 08:52:21 PST 2017 completed: Get AWS instance details.

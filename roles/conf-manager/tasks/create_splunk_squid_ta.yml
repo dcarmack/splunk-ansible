@@ -1,0 +1,5 @@
+---
+- name: Extract Splunk_TA_squid.tgz to "{{ app_loc }}"
+  unarchive:
+    src: /Users/dcarmack/Documents/SplunkApps/Splunk_TA_squid.tgz
+    dest: "{{ splunk_home }}/etc/{{ app_loc }}/"
